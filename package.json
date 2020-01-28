@@ -4,7 +4,7 @@
   "description": "Step by step math solutions",
   "main": "./build/mathsteps.min.js",
   "dependencies": {
-    "mathjs": "3.11.2"
+    "mathjs": "^6.5.0"
   },
   "engines": {
     "node": ">=6.0.0"
@@ -21,8 +21,8 @@
     "eslint": "^3.10.2",
     "eslint-config-google": "^0.7.0",
     "eslint-plugin-sort-requires": "^2.1.0",
-    "mocha": "2.4.5",
-    "webpack": "^3.0.0"
+    "mocha": "^7.0.1",
+    "webpack": "^4.41.5"
   },
   "scripts": {
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --config ./config/webpack.config.js --display-max-modules 0",
