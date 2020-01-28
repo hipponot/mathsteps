@@ -18,11 +18,11 @@ function testOneStep(exprStr, outputStr, debug=false) {
     // eslint-disable-next-line
     console.log(nodeStatus.changeType);
     // eslint-disable-next-line
-    console.log(print(nodeStatus.newNode));
+    console.log(print.ascii(nodeStatus.newNode));
   }
   it(exprStr + ' -> ' + outputStr, function () {
     assert.deepEqual(
-      print(nodeStatus.newNode),
+      print.ascii(nodeStatus.newNode),
       outputStr);
   });
 }
@@ -33,6 +33,7 @@ describe('arithmetic stepping', function() {
     ['(2+2)*5', '4 * 5'],
     ['5*(2+2)', '5 * 4'],
     ['2*(2+2) + 2^3', '2 * 4 + 2^3'],
+    ['6*6', '36'],
   ];
   tests.forEach(t => testOneStep(t[0], t[1]));
 });
